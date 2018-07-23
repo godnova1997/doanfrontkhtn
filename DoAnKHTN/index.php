@@ -9,6 +9,7 @@
 </head>
 
 <body>
+	<div class="fake-body">
 	<!--NAV -->
 	<nav id="myHeader" class="nav navbar-inverse ">
       	<div class="container-fluid">
@@ -216,7 +217,7 @@
 </div>
 <div style="clear:both"></div>
 
-
+</div>
 <script type='text/javascript'>
 function testOverlay(anything,text)
 {

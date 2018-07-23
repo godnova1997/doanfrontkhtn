@@ -4,11 +4,16 @@
 	z-index:100;	
 }
 body{
-    background-image: url("../images/bg-4.jpg");
+	height:100%;
+    background-image: url("../images/bg-main.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+	background-size:cover;
     overflow: scroll;
+	position: relative;
+	box-shadow:inset 0px 0px 10500px 400px #000000;
 }
+
 .container-fluid{
     padding:0;	
 }
