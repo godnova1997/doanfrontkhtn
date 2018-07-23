@@ -10,7 +10,7 @@
 
 <body>
 	<!--NAV -->
-	<nav id="myHeader" class="nav navbar-inverse">
+	<nav id="myHeader" class="nav navbar-inverse ">
       	<div class="container-fluid">
         	<div class="navbar-header">
          		 <a class="navbar-brand" href="#">Letta</a>
@@ -90,12 +90,7 @@
 
     <!-- Products -->
     <div class="container-fluid">
-        <h1 class="item-title">My Arts</h1>
-
-    <?php
-        include 'Codes-idea/Code-example.php';
-        include 'Codes-idea/Code-example.php';
-    ?>	
+        <h1 class="item-title">My Arts</h1>    
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
                             <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/1.jpg');">                                                
@@ -107,64 +102,64 @@
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/2.jpg');">                                                
+                            <div id="002" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/2.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>There's a girl</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/3.jpg');">                                                
+                            <div id="003" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/3.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>Living in pain....</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/4.jpg');">                                                
+                            <div id="004" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/4.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>And despair.....</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/5.jpg');">                                                
+                            <div id="005" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/5.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>But her soul....</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/6.jpg');">                                                
+                            <div id="006" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/6.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>doesn't accept her fate....</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/7.jpg');">                                                
+                            <div id="007" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/7.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>and she's trying to get over it, then....</h1>
                         </div>                
                 </div>
             </div>
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
-                            <div id="001" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/8.jpg');">                                                
+                            <div id="008" onclick="testOverlay(this,'Picture No.1')" class="img-item" style="background-image:url('images/8.jpg');">                                                
                         </div>
                         <div class="img-description">
-                            <h1>Once upon a time....</h1>
+                            <h1>A story of a great warrior begin....</h1>
                         </div>                
                 </div>
             </div>
@@ -189,7 +184,11 @@
     </div>
 
 
+    <div class="container-fluid">
+        <div class="contact">
 
+        </div>
+    </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
