@@ -4,40 +4,47 @@
 	z-index:100;	
 }
 body{
-	height:100%;
     background-image: url("../images/bg-main.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-	background-size:cover;
-    overflow: scroll;
-	position: relative;
-	box-shadow:inset 0px 0px 10500px 400px #000000;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    box-shadow: inset 0 0 200px 300px rgba(255,255,255,1);
 }
-
 .container-fluid{
     padding:0;	
 }
-.navbar-inverse .container-fluid .navbar-header{
+.navbar-inverse .container .navbar-header{
     margin:0;
 }
-.navbar-inverse .container-fluid .navbar-nav li a,
-.navbar-inverse .container-fluid .navbar-header a{
+.navbar-inverse .container .navbar-nav li a,
+.navbar-inverse .container .navbar-header a{
 	font-family:Trajan;
 	text-transform:uppercase;
 	font-weight:bold;
 	
 }	
-.container-fluid .item-title{
+.container .item-title{
     width: 100%;
     text-align: center;
     margin-bottom:60px;
     font-family: 'Trajan';
+    font-weight:bold;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
 }
-.container-fluid .contact{
+.container .contact{
     width: 100%;
-    min-height: 300px;
+    min-height: 10px;
 }
-.navbar-inverse .container-fluid .navbar-header a{
+.contact p{
+    text-align: center;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:2px solid #000;
+}
+.navbar-inverse .container .navbar-header a{
 	letter-spacing:20px;
 }
 .navbar-nav{
@@ -82,12 +89,7 @@ body{
 	height:100%;	
 	text-align:center;
 } 
-.item-content .img-description h1{
-	font-family: Trajan;
-	font-size: 20px;
-	opacity: 0;
-	transition: 1s;
-}
+
 .img-item{
 	position: relative;
 	border:2px solid #333;
@@ -98,11 +100,14 @@ body{
 	background-size: cover;
 	background-repeat: none;
 	background-position: center;
-    transition: 0.5s;
+    transition: 0.3s;
     opacity: 0.9;
 	z-index: 1;
 }
-
+/* .left-pattern img,.right-pattern img{
+    width:30%;
+    height: 30%;
+} */
 .about-me{
     width:100%;
     min-height: 300px;
@@ -113,7 +118,8 @@ body{
     padding:40px;
 }
 .about-picture-content .about-picture{
-    height: 400px;
+    width: 100%;
+    height: 450px;
     background-image:url('../images/designer.jpg');
     background-size:cover;
     background-repeat: no-repeat;
@@ -127,25 +133,62 @@ body{
 .about-info h1{
     font-family: 'Trajan';
     font-weight: bold;
+    font-size: 25px;
 }
 .about-info p{
-    font-family: 'Trajan';
+    font-size: 15px;
 }
-
+.about-info .about-sub-info{
+    padding:20px;
+    padding-left:0;
+}
+.about-info .container-fluid .about-sub-info ul{
+    list-style: none;
+    padding:0;
+}
+.about-info .container-fluid .about-sub-info ul li{
+    text-decoration: none;
+    text-align: left;
+}
 #myCarousel .carousel-indicators{
     z-index: -10;
 }
+.carousel-inner{
+    position: relative;
+}
+.carousel-inner p{
+    position: absolute;
+    color:white;
+    text-align: center;
+    padding:50px;
+    border:2px solid #fff;
+    background-color:rgba(0,0,0,0.6);
 
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */    
+    transform: translate(-50%, -50%);
+
+    z-index:5;
+    font-size:80px;
+    font-family: 'Trajan';
+}
 .item-content:hover .img-item{
     border-radius: 10px;
     opacity: 1;
 	transform: translate(0,-40px) scale(1.1);
 	/* box-shadow: 0 -100px 100px 10px rgba(0,0,0,0.5); */
-	transition: 0.5s;
+	transition: 0.3s;
 	
 }
 .item-content:hover .img-description h1{
-	opacity: 1;
+    opacity: 1;
+    color: black;
+    text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
 }
 .img-description{
 	position: relative;
@@ -156,8 +199,14 @@ body{
 	position: absolute;
 	z-index: 0;
 	transition: 1s;
+    
 }
-
+.item-content .img-description h1{
+	font-family: Trajan;
+	font-size: 15px;
+	opacity: 0;
+	transition: 1s;
+}
 
 
 #myImg {
@@ -262,16 +311,30 @@ body{
   }
 
 
-  @media screen and (max-width:1920px){
+@media screen and (max-width:1920px){
 	.modal-content {        
         width: 70%;
         margin:5% auto auto;
+    }
+}
+@media screen and (max-width:1440px){
+	.carousel-inner p{
+        padding:40px;
+        z-index:5;
+        font-size:40px;
+        font-family: 'Trajan';        
     }
 }
 @media screen and (max-width:960px){
 	.modal-content {
         width: 100%;
         margin:10% auto auto;
+    }
+    .carousel-inner p{
+        padding:20px;
+        z-index:5;
+        font-size:30px;
+        font-family: 'Trajan';        
     }
 }
 
@@ -284,5 +347,21 @@ body{
 	.modal-content {
         width: 100%;
         margin:170px auto;
+    }
+    body{
+        width: 100%;
+        box-shadow: inset 0 0 50px 50px rgba(255,255,255,1);
+    }
+    .carousel-inner p{
+        padding:20px;
+        z-index:5;
+        font-size:30px;
+        font-family: 'Trajan';        
+    }
+}
+@media screen and (max-width:320px){
+    body{
+        width: 100%;
+        box-shadow: inset 0 0 50px 30px rgba(255,255,255,1);
     }
 }
