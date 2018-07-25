@@ -5,26 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type ="text/css" href="css/font-awesome.min.css">
 <link rel="shortcut icon" type="image/png" href="images/pattern-left.png"/>
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <title>Letta</title>
 </head>
 
 <body id="home">
 	<!--NAV -->
-	<nav id="myHeader" class="nav navbar-inverse ">
-      	<div class="container">
-        	<div  class="navbar-header">
-         		 <a class="navbar-brand" href="index.php">Letta</a>
-        	</div>
-            <ul class="nav navbar-nav">
-              <li><a onclick = "scrollToHome()">Home</a></li>
-              <li><a onclick = "scrollToArtwork()" >Artwork</a></li>
-              <li><a onclick = "scrollToContact()" >About me</a></li>
-            </ul>
-  		</div>
-    </nav>
-    
 
+    <nav id="myHeader" class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="index.php">Letta</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a onclick = "scrollToHome()">Home</a></li>
+                <li><a onclick = "scrollToArtwork()" >Artwork</a></li>
+                <li><a onclick = "scrollToContact()" >About me</a></li>
+            </ul>
+            
+            </div>
+        </div>
+    </nav>
 
 
 
@@ -35,7 +45,7 @@
 
     <div class="content">
     <!-- SLIDER -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel-1" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -57,7 +67,7 @@
                 </div>
               </div>
             
-              <!-- Left and right controls -->
+              <!-- Left and right controls --><!--
               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
                 <span class="sr-only">Previous</span>
@@ -65,7 +75,7 @@
               <a class="right carousel-control" href="#myCarousel" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
-              </a>
+              </a>-->
         </div>
     </div>
     <!-- pattern -->
@@ -86,7 +96,7 @@
 
 
     <!-- Products -->
-    <div class="container">
+    <div id="scroll-reveal" class="container">
         <!-- <div class="left-pattern"> 
         	<img src="images/pattern-left.png" />
         </div>
@@ -209,17 +219,56 @@
    
 
 
-
-
-
-
-
-
-
-
-
-
+<!--
     <div class="container">
+        <img class="mySlides" src="images/1.jpg">
+        <img class="mySlides" src="images/2.jpg">
+        <img class="mySlides" src="images/3.jpg">
+        <img class="mySlides" src="images/4.jpg">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+-->
+<div class="container">
+	<div id="row-2" class="row">
+		<div class="col-md-9 col-center m-auto">
+			<h2><span>Trending <b>Products</b></span></h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+				 
+				<!-- Wrapper for carousel items -->
+				<div id="carousel-2" class="carousel-inner">
+                    
+                    <div class="item carousel-item active">
+						<div class="row">                            
+                            <div class="col-sm-4"><a href="https://google.com"><div class="img-box" style="background-image:url('images/1.jpg');"></div></a></div>
+							<div class="col-sm-4"><a href="https://google.com"><div class="img-box" style="background-image:url('images/2.jpg');"></div></a></div>
+							<div class="col-sm-4"><a href="https://google.com"><div class="img-box" style="background-image:url('images/3.jpg');"></div></a></div>
+						</div>
+					</div>
+                    
+                    <div class="item carousel-item">
+						<div class="row">                            
+                            <div class="col-sm-4"><div class="img-box" style="background-image:url('images/1.jpg');"></div></div>
+							<div class="col-sm-4"><div class="img-box" style="background-image:url('images/2.jpg');"></div></div>
+							<div class="col-sm-4"><div class="img-box" style="background-image:url('images/3.jpg');"></div></div>
+						</div>
+					</div>
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+				<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container">
         <div id="contact" class="about-me">
             <div class="about-picture-content col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="about-picture">
@@ -253,18 +302,13 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="contact">
             <p>Copyright © 2018 Demonicalist</p>
         </div>
     </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
 
-    
 
 
 
@@ -285,14 +329,11 @@
 
 </div>
 <div style="clear:both"></div>
-
-
-<script type='text/javascript'>
-
-
-</script>   
-
+<!-- SCRIPT --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
     
-
 </body>
 </html>
