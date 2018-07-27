@@ -50,31 +50,30 @@ function scrollToHome(){
   x.scrollIntoView({behavior:"smooth",block:"start"});
 }
 function scrollToArtwork(){
-  var x = document.getElementById("artwork-reveal");
+  var x = document.getElementById("artwork-scroll");
   x.scrollIntoView({behavior: "smooth", block:"start"});
 }
 function scrollToContact(){
-  var x = document.getElementById("contact");
+  var x = document.getElementById("about");
   x.scrollIntoView( { behavior:"smooth", block:"start"});
 }
+function scrollToProgress(){
+    var x = document.getElementById("progress-container");
+    x.scrollIntoView( { behavior:"smooth", block:"start"});
+}
 //SCROLL TO REVEAL
-var divpos= $("#artwork-reveal").offset().top;
-var x = $('#artwork-reveal').height();
-// var divpos2= $("#test1").offset().top;
-// var y = $('#test1').height();
+var divpos= $("#artwork").offset().top;
 
 var interval = setInterval(function() {
-    if ($(window).scrollTop() >= divpos-x) {        
+    if ($(window).scrollTop() >= divpos-$(window).height()+100) {        
         var animDelay = 0;
             $('.item-container').each(function(){
             $(this).delay(animDelay).animate({
                 opacity:1,
-                animationTimingFunction: "ease-in"                
             },1000);
             animDelay += 100;
         });
-
-        
+        //clearInterval(interval);
     }
     // if ($(window).scrollTop() >= divpos2-y) {
     //     var animDelay = 0;
@@ -84,13 +83,10 @@ var interval = setInterval(function() {
     //         },300);
     //         animDelay +=150;
     //     });
-    //     clearInterval(interval);
+    //     
     // }
     
 }, 100);
-
-
-
 //CLick redirect
 function clickRedirect(){
     location.href = "detail.php";
@@ -105,5 +101,23 @@ function showPage() {
 }
 
 
-// add listener to disable scroll
-document.getElementById("test").addEventListener('scroll',noscroll);
+
+
+// $(document).ready(function(){
+//     $("#hide").click(function(){
+//         $("#show").slideToggle("slow");
+//     });
+//     $(".progress-bar").click(function(){
+//         $(".progress-bar").attr('id','hide');
+//     });
+// });
+function showProgress(ele){
+    var x = document.getElementById("status"+ele.id);
+    if(x.style.opacity == 0){
+        x.style.opacity = 1;
+        x.style.display ="block";
+    } else {
+        x.style.opacity = 0;
+        x.style.display = "none";
+    }
+}

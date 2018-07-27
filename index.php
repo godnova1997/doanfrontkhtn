@@ -29,6 +29,7 @@
                 <li><a onclick = "scrollToHome()">Top</a></li>
                 <li><a onclick = "scrollToArtwork()" >Artwork</a></li>
                 <li><a onclick = "scrollToContact()" >About me</a></li>
+                <li><a onclick = "scrollToProgress()">Progress</a></li>
             </ul>
             </div>
         </div>
@@ -75,7 +76,7 @@
     <!-- pattern -->
     <div class="container">
     	
-        <div class="pattern">
+        <div id="artwork-scroll" class="pattern">
       		<img src="images/pattern.png" />
         </div>  
     </div>
@@ -90,7 +91,7 @@
 
 
     <!-- Products -->
-    <div id="artwork-reveal" class="container">
+    <div   class="container">
         <!-- <div class="left-pattern"> 
         	<img src="images/pattern-left.png" />
         </div>
@@ -213,16 +214,6 @@
    
 
 
-<!--
-    <div class="container">
-        <img class="mySlides" src="images/1.jpg">
-        <img class="mySlides" src="images/2.jpg">
-        <img class="mySlides" src="images/3.jpg">
-        <img class="mySlides" src="images/4.jpg">
-        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-    </div>
--->
 <div class="container">
 	<div id="row-2" class="row">
 		<div class="col-md-9 col-center m-auto">
@@ -262,39 +253,9 @@
 
 
 
-<!-- <div id="test1" class="container-fluid">
-        <div id="contact" class="about-me">
-            <div class="about-picture-content col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="about-picture">
 
-                </div>
-            </div>
-            <div class="about-info col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <h1>Nguyen Quang Minh</h1>
-                <p>Hello, i'm the owner of this site, nice to meet you, hope we will have good time togetther</p>
-                <div class="container-fluid">
-                    <div class="about-sub-info col-lg-12">
-                        <h1>Education</h1>
-                        <p>
-                            <ul>
-                                <li>University Of Pedagory</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="about-sub-info col-lg-12">
-                        <h1>Contact</h1>
-                        <p>
-                            <ul>
-                                <li>Tel: 0122-551-9126</li>
-                                <li>Email: demonicalist@gmail.com</li>
-                                <li>Address: 67 Road of Darkness</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div> -->
+
+
     <div id="about" class="container-fluid">
         <h1 class="about-title">About me</h1>
         
@@ -341,6 +302,123 @@
                         </br>
                     <p>                    
                 </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+    <!--PROGRESS-->
+    <div id="progress-container" class="container">
+        <h1 id="progress-title">Project In Progress</h1>
+        <div class="progress-detail">
+            <h1 style="width:30%;">Sky Kingdom </h1>
+            <div  class="progress">                
+                <div id="0001" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                40%
+                </div>                
+            </div>
+            <div id="status0001" class="progress-info">
+                    <p>
+                        Sketched: 50%</br>
+                        Colored: 30%</br>
+                        Estimate Time To Publish: July 30th 2018
+                    </p>
+            </div>
+        </div>        
+        <div class="progress-detail">
+            <h1 style="width:30%;">At The Horizon </h1>
+            <div class="progress">                
+                <div id="0002" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                90%
+                </div>
+            </div>
+            <div id="status0002" class="progress-info">
+                    <p>
+                        Sketched: 100%</br>
+                        Colored: 80% </br>
+                        Estimate Time To Publish: July 30th 2018
+                    </p>
+            </div>
+        </div>
+        <div class="progress-detail">
+            <h1 style="width:30%;">Until The End </h1>
+            <div class="progress">                
+                <div id="0003" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                60%
+                </div>
+            </div>
+            <div id="status0003" class="progress-info">
+                    <p>
+                        Sketched: 100%</br>
+                        Colored: 20% </br>
+                        Estimate Time To Publish: July 30th 2018
+                    </p>
+            </div>
+        </div>
+        <div class="progress-detail">
+            <h1 style="width:30%;">Edge Of The Void</h1>
+            <div class="progress">                
+                <div id="0004" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                10%
+                </div>
+            </div>
+            <div id="status0004" class="progress-info">
+                    <p>
+                        Sketched: 20%</br>
+                        Colored: 0% </br>
+                        Estimate Time To Publish: July 30th 2018
+                    </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="footer" class="container-fluild">
+        <div class="footer-info">
+            <div class="album">
+                <h1> Albums </h1>
+                <ul>
+                    <li>Battle Cry</li>
+                    <li>Tokyo Showdown</li>
+                    <li>One and Forever</li>
+                    <li>Mystical Love</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h1> Services </h1>
+                <ul>
+                    <li>Purchase</li> 
+                    <li>Transfer</li> 
+                    <li>Order</li> 
+                    <li>Shipment</li>                                       
+                </ul>
+            </div>
+            <div class="private-and-policy">
+                <h1> Private and Policy </h1>
+                <ul>
+                    <li>Our terms</li>                        
+                </ul>
+            </div>
+            
+        </div>
+        <div class="social">
+            <div class="social-item">
+                <img style="float:left;" width=50px height=50px src="images/facebook.png"><p style="line-height:50px; height:50px; color:white; float:left;">Facebook</p>
+            </div>
+            <div class="social-item">
+                <img style="float:left;" width=50px height=50px src="images/google-plus.png"><p style="line-height:50px; height:50px; color:white; float:left;">Google Plus</p>
+            </div>
+            <div class="social-item">
+                <img style="float:left;" width=50px height=50px src="images/pinterest.png"><p style="line-height:50px; height:50px; color:white; float:left;">Pinterest</p>
+            </div>
+            <div class="social-item">
+                <img style="float:left;" width=50px height=50px src="images/twitter.png"><p style="line-height:50px; height:50px; color:white; float:left;">Twitter</p>
             </div>
         </div>
     </div>

@@ -105,41 +105,7 @@
 
 
 
-<div id="test1" class="container-fluid">
-        <div id="contact" class="about-me" style="opacity:1;">
-            <div class="about-picture-content col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="about-picture">
-
-                </div>
-            </div>
-            <div class="about-info col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <h1>Nguyen Quang Minh</h1>
-                <p>Hello, i'm the owner of this site, nice to meet you, hope we will have good time togetther</p>
-                <div class="container-fluid">
-                    <div class="about-sub-info col-lg-12">
-                        <h1>Education</h1>
-                        <p>
-                            <ul>
-                                <li>University Of Pedagory</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <div class="about-sub-info col-lg-12">
-                        <h1>Contact</h1>
-                        <p>
-                            <ul>
-                                <li>Tel: 0122-551-9126</li>
-                                <li>Email: demonicalist@gmail.com</li>
-                                <li>Address: 67 Road of Darkness</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
+    <div class="container">
         <div class="contact">
             <p>Copyright © 2018 Demonicalist</p>
         </div>

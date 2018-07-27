@@ -130,8 +130,8 @@ body {
     width:30%;
     height: 30%;
 } */
-#about h1{
-    
+#about {
+    padding-top:50px;
 }
 .about-title{
     text-align: center;
@@ -161,6 +161,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.about-item p{
+    font-family: 'Trajan';
 }
 /*hover to change text */
 .about-item:hover{
@@ -620,7 +623,7 @@ i.fa.fa-chevron-right {
 /*DETAIL PAGE */
 #product-detail{
     margin-bottom: 50px;    
-    margin-top: 100px;
+    margin-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 30px 100px 5px #333;
@@ -657,4 +660,91 @@ i.fa.fa-chevron-right {
     box-shadow: inset 0 0 10px 3px #333;
     font-family: 'Trajan';
     border:none;
+}
+
+
+
+
+
+/*PROGRESS*/
+#progress-container h1#progress-title{
+    font-size: 40px;
+    font-family: 'Trajan';
+    text-align: center;
+    font-weight: bold;
+    margin-top:50px;
+    padding-bottom:20px;
+    border-bottom: 2px solid #000;
+}
+.progress-info {
+    transition: all 0.2s linear;
+    padding: 30px;
+    opacity: 0;
+    display: none;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 15px;
+    font-family: 'Trajan';
+}
+.progress-bar{
+    background-color: rgba(44, 189, 44, 0.89);
+}
+.progress-detail h1{
+    font-size:20px !important;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+#footer{
+    background-color: #333;
+    min-height: 400px;
+    background-image:url('../images/footer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+    color:white;
+}
+.social{
+    display: block;
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.social-item{
+    margin: 20px;
+    min-height: 50px;
+    float:left;
+    
+}
+.social-item p{
+    margin-left:10px;
+}
+
+.album,
+.private-and-policy,
+.services{
+    margin-left:50px;
+    min-height: 400px;
+    float:left;
+    font-family: 'Trajan';
+}
+.album h1,
+.private-and-policy h1,
+.services h1{
+    font-size:30px;
+}
+.private-and-policy ul,
+.album ul,
+.services ul{
+    list-style: none;
+    padding-left: 0px;
+    line-height: 40px;
+}
+.private-and-policy ul li,
+.album ul li,
+.services ul li{
+    color:#bbb;
 }
