@@ -95,30 +95,30 @@ function clickRedirect(){
 }
 var myVar;
 function loadEffect() {
-    myVar = setTimeout(showPage,1000);
+    myVar = setTimeout(showPage,0000);
 }
 
-function showPage() {
-    document.getElementById("loader").style.display = "none";
-    var x = document.getElementById("slider");
-    var y = document.getElementById("myHeader");
-    var z = document.getElementById("artwork-scroll");
-    var a = document.getElementById("artwork-container");
-    var b = document.getElementById("row-2");
-    var c = document.getElementById("about");
-    var d = document.getElementById("progress-container");
-    var e = document.getElementById("myFooter");
-    var f = document.getElementById("copyright");
-    x.style.display = "block";
-    y.style.display = "block";
-    z.style.display = "block";
-    a.style.display = "block";
-    b.style.display = "block";
-    c.style.display = "block";
-    d.style.display = "block";
-    e.style.display = "block";
-    f.style.display = "block";
-}
+// function showPage() {
+//     //document.getElementById("loader").style.display = "none";
+//     var x = document.getElementById("slider");
+//     var y = document.getElementById("myHeader");
+//     var z = document.getElementById("artwork-scroll");
+//     var a = document.getElementById("artwork-container");
+//     var b = document.getElementById("row-2");
+//     var c = document.getElementById("about");
+//     var d = document.getElementById("progress-container");
+//     var e = document.getElementById("myFooter");
+//     var f = document.getElementById("copyright");
+//     x.style.display = "block";
+//     y.style.display = "block";
+//     z.style.display = "block";
+//     a.style.display = "block";
+//     b.style.display = "block";
+//     c.style.display = "block";
+//     d.style.display = "block";
+//     e.style.display = "block";
+//     f.style.display = "block";
+// }
 
 
 

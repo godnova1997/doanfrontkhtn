@@ -12,10 +12,10 @@
 <title>Letta</title>
 </head>
 
-<body id="home" onload="loadEffect()">    
-    <div id="loader"></div>
+<body id="home">    
+    <!-- <div id="loader"></div> -->
 	<!--NAV -->
-    <nav id="myHeader" style="display:none" class="navbar navbar-inverse sticky">
+    <nav id="myHeader"  class="navbar navbar-inverse sticky">
         <div class="container">
             <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -38,7 +38,7 @@
 
 
 
-    <div id="slider" style="display:none" class="content animate-right">
+    <div id="slider"  class="content animate-right">
     <!-- SLIDER -->
         <div id="myCarousel-1" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
@@ -109,7 +109,7 @@
     <!-- pattern -->
     <div class="container">
     	
-        <div id="artwork-scroll"  style="display:none" class="pattern">
+        <div id="artwork-scroll"   class="pattern">
       		<img src="images/pattern.png" />
         </div>  
     </div>
@@ -117,7 +117,7 @@
 
 
     <!-- Products -->
-    <div id="artwork-container" class="container" style="display:none">
+    <div id="artwork-container" class="container" >
         <!-- <div class="left-pattern"> 
         	<img src="images/pattern-left.png" />
         </div>
@@ -241,7 +241,7 @@
 
 
 <div class="container">
-	<div id="row-2" style="display:none" class="row">
+	<div id="row-2"  class="row">
 		<div class="col-md-9 col-center m-auto">
 			<h2><span>Hot <b>Pictures</b></span></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
@@ -282,7 +282,7 @@
 
 
 
-    <div id="about" style="display:none" class="container-fluid">
+    <div id="about"  class="container-fluid">
         <h1 class="about-title">About me</h1>
         
         <div class="container">
@@ -340,7 +340,7 @@
 
 
     <!--PROGRESS-->
-    <div id="progress-container" style="display:none" class="container">
+    <div id="progress-container" class="container">
         <h1 id="progress-title">Project In Progress</h1>
         <div class="progress-detail">
             <h1 style="width:100%;">Dragon Strike</h1>
@@ -405,7 +405,7 @@
            
     </div>
 
-<footer id="myFooter" style="display:none">
+<footer id="myFooter" >
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-lg-3">
@@ -449,7 +449,7 @@
         </div>
     </footer>
 
-    <div id="copyright" style="display:none" class="container">
+    <div id="copyright" class="container">
         <div class="contact">
             <p>Copyright © 2018 Demonicalist</p>
         </div>
