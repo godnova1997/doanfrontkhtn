@@ -27,7 +27,7 @@ function testOverlay(anything)
     var modalImg = document.getElementById("img01");
     modal.style.display = "block";    
     modalImg.src = imgurl;
-    modalImg.onclick = function(){location.href = "detail.php";}
+    modalImg.onclick = function(){location.href = "detail.php?id="}
     //captionText.innerHTML = text;
     //}
     // Get the <span> element that closes the modal
@@ -36,8 +36,8 @@ function testOverlay(anything)
         span.style.fontSize = "50px";
         span.style.marginTop = "50px";
         span.onclick = function() { 
-        modal.style.display = "none";
-    }
+            modal.style.display = "none";
+        }
     
     modal.onclick = function(){
         modal.style.display = "none";
@@ -61,6 +61,8 @@ function scrollToProgress(){
     var x = document.getElementById("progress-container");
     x.scrollIntoView( { behavior:"smooth", block:"start"});
 }
+
+
 //SCROLL TO REVEAL
 var divpos= $("#artwork").offset().top;
 
@@ -86,20 +88,37 @@ var interval = setInterval(function() {
     //     
     // }
     
-}, 100);
+}, 50);
 //CLick redirect
 function clickRedirect(){
     location.href = "detail.php";
 }
-
+var myVar;
 function loadEffect() {
-    myVar = setTimeout(showPage, 500);
+    myVar = setTimeout(showPage,1000);
 }
 
 function showPage() {
-  document.getElementById("test").style.display = "block";
+    document.getElementById("loader").style.display = "none";
+    var x = document.getElementById("slider");
+    var y = document.getElementById("myHeader");
+    var z = document.getElementById("artwork-scroll");
+    var a = document.getElementById("artwork-container");
+    var b = document.getElementById("row-2");
+    var c = document.getElementById("about");
+    var d = document.getElementById("progress-container");
+    var e = document.getElementById("myFooter");
+    var f = document.getElementById("copyright");
+    x.style.display = "block";
+    y.style.display = "block";
+    z.style.display = "block";
+    a.style.display = "block";
+    b.style.display = "block";
+    c.style.display = "block";
+    d.style.display = "block";
+    e.style.display = "block";
+    f.style.display = "block";
 }
-
 
 
 
@@ -121,3 +140,9 @@ function showProgress(ele){
         x.style.display = "none";
     }
 }
+
+$(document).ready(function() {    
+    $("#test-1").owlCarousel();
+  });
+
+

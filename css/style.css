@@ -3,8 +3,50 @@
 .navbar-inverse{
     z-index:100;
 }
+
+/* #loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    z-index: 619;
+} */
+
+/* Center the loader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #383838;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+
+
 body{
-    background-image: url("../images/bg-main.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -132,6 +174,7 @@ body {
 } */
 #about {
     padding-top:50px;
+    margin-bottom:50px
 }
 .about-title{
     text-align: center;
@@ -161,9 +204,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    word-wrap: break-word;
+}
+.about-item h1{
+    font-family: 'Trajan';
+    font-size: 100%;
 }
 .about-item p{
-    font-family: 'Trajan';
+    font-family: 'Trajan';    
+    font-size: 90%;
 }
 /*hover to change text */
 .about-item:hover{
@@ -177,7 +226,6 @@ body {
 .about-item:hover p{
     transition: 0.5s;
     font-family: 'Trajan';
-    font-size: 20px;
     opacity: 1;
 }
 .about-item:hover .shadow{
@@ -207,9 +255,6 @@ body {
     left:50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    padding-top:20px;
-    padding-left:30px;
-    font-size: 30px;
     color: white;
     margin: auto;
 }
@@ -401,96 +446,7 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-/*Modal image zoom*/
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
 
-
-
-
-/*add font*/
-@font-face {
-    font-family: "Royal";
-    src: url('../fonts/Royal.ttf');
-}
-@font-face {
-    font-family: "GOW";
-    src: url('../fonts/GODOFWAR.ttf');
-}
-@font-face {
-    font-family: 'Trajan';
-    src: url('../fonts/Trajan Pro Regular.ttf')  format('truetype');
-  }
-
-
-@media screen and (max-width:1920px){
-	.modal-content {        
-        width: 70%;
-        margin:5% auto auto;
-    }
-}
-@media screen and (max-width:1440px){
-	.carousel-inner p{
-        padding:40px;
-        z-index:5;
-        font-size:40px;
-        font-family: 'Trajan';        
-    }
-}
-@media screen and (max-width:960px){
-	.modal-content {
-        width: 100%;
-        margin:10% auto auto;
-    }
-    .carousel-inner p{
-        padding:20px;
-        z-index:5;
-        font-size:30px;
-        font-family: 'Trajan';        
-    }
-}
-
-@media screen and (max-width:760px){
-	.navbar-nav{
-		float:none;
-		text-align:center;	
-	}
-	/* 100% Image Width on Smaller Screens */
-	.modal-content {
-        width: 100%;
-        margin:170px auto;
-    }
-    body{
-        width: 100%;
-        box-shadow: inset 0 0 50px 50px rgba(255,255,255,1);
-    }
-    .carousel-inner p{
-        padding:20px;
-        z-index:5;
-        font-size:30px;
-        font-family: 'Trajan';        
-    }
-    /*SIZE WHEN RESIZE WINDOW*/
-    #carousel-2 .item .row div .img-box{
-        min-height: 100px !important;
-        width: 70% !important;
-        display: inline-block;
-    }
-    .carousel-control{
-        color:#333;
-    }
-    .carousel-control:focus, .carousel-control:hover{
-        color:#000;
-    }
-}
-@media screen and (max-width:320px){
-    body{
-        width: 100%;
-        box-shadow: inset 0 0 50px 30px rgba(255,255,255,1);
-    }
-}
 
 /*slider 2*/
 #carousel-2{
@@ -540,53 +496,7 @@ i.fa.fa-chevron-right {
     left: 50%;
     transform: translate(-50%,-50%);
 }
-/*page animation*/
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes fadeInUp{
-    0%{
-        opacity: 0;
-        transform: translate3d(0,100%,0);
-    }
-    100%{
-        opacity: 1;
-        transform: none;
-    }
-}
-@keyframes fadeInRight {
-    0% {
-      opacity: 0;
-      transform: translate3d(100%, 0, 0);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: none;
-    }
-}
-.m-scene .scene-element{
-    animation-duration: 0.25s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-}
-.m-scene .scene_element--fadein {
-    animation-name: fadeIn;
-}
-.m-scene .scene_element--fadeinup {
-    animation-name: fadeInUp;
-}
-.m-scene .scene_element--fadeinright {
-    animation-name: fadeInRight;
-}
-.m-scene.is-exiting .scene_element {
-    animation-direction: alternate-reverse;
-}
+
 
 
 
@@ -667,6 +577,9 @@ i.fa.fa-chevron-right {
 
 
 /*PROGRESS*/
+#progress-container{
+    margin-bottom:50px;
+}
 #progress-container h1#progress-title{
     font-size: 40px;
     font-family: 'Trajan';
@@ -676,19 +589,26 @@ i.fa.fa-chevron-right {
     padding-bottom:20px;
     border-bottom: 2px solid #000;
 }
+/*old progress detail*/
 .progress-info {
-    transition: all 0.2s linear;
-    padding: 30px;
-    opacity: 0;
-    display: none;
+    padding: 20px;
+    opacity: 1;
     border-radius: 30px;
     background-color: rgba(0,0,0,0.4);
     color: white;
     font-size: 15px;
     font-family: 'Trajan';
 }
+.progress-content{
+    padding:20px;
+    border:2px solid #333;
+    font-size:20px;
+    font-family: 'Trajan';
+    font-weight: bold;
+    letter-spacing: 5px;
+}
 .progress-bar{
-    background-color: rgba(44, 189, 44, 0.89);
+    background-color: rgba(29, 32, 29, 0.89);
 }
 .progress-detail h1{
     font-size:20px !important;
@@ -698,13 +618,16 @@ i.fa.fa-chevron-right {
 /*FOOTER*/
 #footer{
     background-color: #333;
-    min-height: 400px;
+    height: 100%;
     background-image:url('../images/footer.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     position: relative;
     color:white;
+}
+.footer-info{
+    height: 100%;
 }
 .social{
     display: block;
@@ -728,7 +651,7 @@ i.fa.fa-chevron-right {
 .services{
     margin-left:50px;
     min-height: 400px;
-    float:left;
+    float:none;
     font-family: 'Trajan';
 }
 .album h1,
@@ -747,4 +670,260 @@ i.fa.fa-chevron-right {
 .album ul li,
 .services ul li{
     color:#bbb;
+}
+
+
+
+
+
+/*Footer*/
+#myFooter {
+    background-color: #333;
+    color: white;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+}
+
+#myFooter .info{
+    text-align: justify; 
+    color: #afb0b1;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter .logo{
+    margin-top: 10px;
+}
+
+#myFooter .second-bar .logo a{
+    color:white;
+    font-size: 28px;
+    float: left;
+    font-weight: bold;
+    line-height: 68px;
+    margin: 0;
+    padding: 0;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .second-bar {
+    text-align: center;
+    background-color: #1b1b1b;
+    text-align: center;
+}
+
+#myFooter .second-bar a {
+    font-size: 22px;
+    color: #9fa3a9;
+    padding: 10px;
+    transition: 0.2s;
+    line-height: 68px;
+}
+
+#myFooter .second-bar a:hover {
+    text-decoration: none;
+}
+
+#myFooter .social-icons {
+    float:right;
+}
+
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+
+.info p{
+    text-align: center;
+    padding:30px;
+}    
+#btn-contact{
+    display:inline-block;
+    color:#333;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#fff;
+    border-radius: 30px;
+    border:none;
+    padding:10px 30px;
+    transition: 0.5s;
+}
+#btn-contact:hover{
+    transition: 0.5s;
+    background-color: #afb0b1;
+}
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html{
+    height: 100%;
+}
+
+.content{
+   flex: 1 0 auto;
+   -webkit-flex: 1 0 auto;
+   min-height: 200px;
+}
+
+#myFooter{
+   flex: 0 0 auto;
+   -webkit-flex: 0 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Modal image zoom*/
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+/*add font*/
+@font-face {
+    font-family: "Royal";
+    src: url('../fonts/Royal.ttf');
+}
+@font-face {
+    font-family: "GOW";
+    src: url('../fonts/GODOFWAR.ttf');
+}
+@font-face {
+    font-family: 'Trajan';
+    src: url('../fonts/Trajan Pro Regular.ttf')  format('truetype');
+  }
+
+
+@media screen and (max-width:1920px){
+	.modal-content {        
+        width: 70%;
+        margin:5% auto auto;
+    }
+}
+@media screen and (max-width:1440px){
+	.carousel-inner p{
+        padding:40px;
+        z-index:5;
+        font-size:40px;
+        font-family: 'Trajan';        
+    }
+}
+@media screen and (max-width:960px){
+	.modal-content {
+        width: 100%;
+        margin:10% auto auto;
+    }
+    .carousel-inner p{
+        padding:20px;
+        z-index:5;
+        font-size:30px;
+        font-family: 'Trajan';        
+    }
+    #myFooter .row{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:760px){
+	.navbar-nav{
+		float:none;
+		text-align:center;	
+	}
+	/* 100% Image Width on Smaller Screens */
+	.modal-content {
+        width: 100%;
+        margin:170px auto;
+    }
+    body{
+        width: 100%;
+        box-shadow: inset 0 0 50px 50px rgba(255,255,255,1);
+    }
+    .carousel-inner p{
+        padding:20px;
+        z-index:5;
+        font-size:30px;
+        font-family: 'Trajan';        
+    }
+    /*SIZE WHEN RESIZE WINDOW*/
+    #carousel-2 .item .row div .img-box{
+        min-height: 100px !important;
+        width: 70% !important;
+        display: inline-block;
+    }
+    .carousel-control{
+        color:#333;
+    }
+    .carousel-control:focus, .carousel-control:hover{
+        color:#000;
+    }
+    .album,
+    .private-and-policy,
+    .services{
+        float:none !important;
+        width:100%;
+        min-height: 200px !important;
+        margin-bottom:20px;
+    }
+    
+    #myFooter {
+        text-align: center;
+    }
+    
+    #myFooter .info{
+        text-align: center;
+    }    
+    
+}
+@media screen and (max-width:320px){
+    body{
+        width: 100%;
+        box-shadow: inset 0 0 50px 30px rgba(255,255,255,1);
+    }
+    .about-item{
+        width: 100% !important;
+    }
+    
 }

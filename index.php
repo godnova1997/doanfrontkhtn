@@ -2,19 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type ="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="shortcut icon" type="image/png" href="images/pattern-left.png"/>
-
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <title>Letta</title>
 </head>
 
-<body id="home">
+<body id="home" onload="loadEffect()">    
+    <div id="loader"></div>
 	<!--NAV -->
-    <nav id="myHeader" class="navbar navbar-inverse sticky">
+    <nav id="myHeader" style="display:none" class="navbar navbar-inverse sticky">
         <div class="container">
             <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,7 +27,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a onclick = "scrollToHome()">Top</a></li>
+                <li><a onclick = "scrollToHome()"><div class="fa fa-arrow-up"></div></a></li>
                 <li><a onclick = "scrollToArtwork()" >Artwork</a></li>
                 <li><a onclick = "scrollToContact()" >About me</a></li>
                 <li><a onclick = "scrollToProgress()">Progress</a></li>
@@ -37,8 +38,7 @@
 
 
 
-
-    <div class="content animate-right">
+    <div id="slider" style="display:none" class="content animate-right">
     <!-- SLIDER -->
         <div id="myCarousel-1" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
@@ -61,7 +61,15 @@
                   <img src="images/slider-1.jpg" style="width:100%;">
                 </div>
               </div>
-            
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel-1" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel-1" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
               <!-- Left and right controls --><!--
               <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -73,25 +81,43 @@
               </a>-->
         </div>
     </div>
+
+    <!-- <div id="test-1" class="owl-carousel">
+    <div class="item active">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    <div class="item">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    <div class="item">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    <div class="item">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    <div class="item">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    <div class="item">
+        <img src="images/slider-1.jpg" style="width:100%;">
+    </div>
+    </div> -->
+
+
+
+
     <!-- pattern -->
     <div class="container">
     	
-        <div id="artwork-scroll" class="pattern">
+        <div id="artwork-scroll"  style="display:none" class="pattern">
       		<img src="images/pattern.png" />
         </div>  
     </div>
 
 
 
-
-
-
-
-
-
-
     <!-- Products -->
-    <div   class="container">
+    <div id="artwork-container" class="container" style="display:none">
         <!-- <div class="left-pattern"> 
         	<img src="images/pattern-left.png" />
         </div>
@@ -99,7 +125,7 @@
         	<img src="images/pattern-right.png" />
         </div>  
         -->
-        <h1 id="artwork" class="item-title">ARTWORK</h1>   
+        <h1 id="artwork"  class="item-title">ARTWORK</h1>   
         
             <div class="item-container col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="item-content">
@@ -215,7 +241,7 @@
 
 
 <div class="container">
-	<div id="row-2" class="row">
+	<div id="row-2" style="display:none" class="row">
 		<div class="col-md-9 col-center m-auto">
 			<h2><span>Hot <b>Pictures</b></span></h2>
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
@@ -256,7 +282,7 @@
 
 
 
-    <div id="about" class="container-fluid">
+    <div id="about" style="display:none" class="container-fluid">
         <h1 class="about-title">About me</h1>
         
         <div class="container">
@@ -314,115 +340,116 @@
 
 
     <!--PROGRESS-->
-    <div id="progress-container" class="container">
+    <div id="progress-container" style="display:none" class="container">
         <h1 id="progress-title">Project In Progress</h1>
         <div class="progress-detail">
-            <h1 style="width:30%;">Sky Kingdom </h1>
-            <div  class="progress">                
-                <div id="0001" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+            <h1 style="width:100%;">Dragon Strike</h1>
+            <div class="progress">                
+                <div id="0001" class="progress-bar progress-bar-striped active" href="#collapseExample0001" data-toggle="collapse" role="button" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:40%">
                 40%
-                </div>                
             </div>
-            <div id="status0001" class="progress-info">
-                    <p>
-                        Sketched: 50%</br>
-                        Colored: 30%</br>
-                        Estimate Time To Publish: July 30th 2018
-                    </p>
             </div>
-        </div>        
-        <div class="progress-detail">
-            <h1 style="width:30%;">At The Horizon </h1>
-            <div class="progress">                
-                <div id="0002" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                90%
-                </div>
-            </div>
-            <div id="status0002" class="progress-info">
-                    <p>
-                        Sketched: 100%</br>
-                        Colored: 80% </br>
-                        Estimate Time To Publish: July 30th 2018
-                    </p>
-            </div>
-        </div>
-        <div class="progress-detail">
-            <h1 style="width:30%;">Until The End </h1>
-            <div class="progress">                
-                <div id="0003" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
-                60%
-                </div>
-            </div>
-            <div id="status0003" class="progress-info">
-                    <p>
-                        Sketched: 100%</br>
-                        Colored: 20% </br>
-                        Estimate Time To Publish: July 30th 2018
-                    </p>
-            </div>
-        </div>
-        <div class="progress-detail">
-            <h1 style="width:30%;">Edge Of The Void</h1>
-            <div class="progress">                
-                <div id="0004" onclick ="showProgress(this)" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
-                10%
-                </div>
-            </div>
-            <div id="status0004" class="progress-info">
-                    <p>
+            <div id="collapseExample0001" class=" collapse" data-target="#collapseExample0001" >
+                <div class="progress-content">
                         Sketched: 20%</br>
                         Colored: 0% </br>
                         Estimate Time To Publish: July 30th 2018
-                    </p>
+                </div>
+            </div>
+        </div>        
+        <div class="progress-detail">
+            <h1 style="width:100%;">Pillar Of Inferality</h1>
+            <div class="progress">                
+                <div id="0002" class="progress-bar progress-bar-striped active" href="#collapseExample0002" data-toggle="collapse" role="button" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                90%
+            </div>
+            </div>
+            <div id="collapseExample0002" class=" collapse" data-target="#collapseExample0002" >
+                <div class="progress-content">
+                        Sketched: 20%</br>
+                        Colored: 0% </br>
+                        Estimate Time To Publish: July 30th 2018
+                </div>
             </div>
         </div>
+        <div class="progress-detail">
+            <h1 style="width:100%;">Together You and Me</h1>
+            <div class="progress">                
+                <div id="0003" class="progress-bar progress-bar-striped active" href="#collapseExample0003" data-toggle="collapse" role="button" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                50%
+            </div>
+            </div>
+            <div id="collapseExample0003" class=" collapse" data-target="#collapseExample0003" >
+                <div class="progress-content">
+                        Sketched: 20%</br>
+                        Colored: 0% </br>
+                        Estimate Time To Publish: July 30th 2018
+                </div>
+            </div>
+        </div>
+        <div class="progress-detail">
+            <h1 style="width:100%;">Edge Of The Void</h1>
+            <div class="progress">                
+                <div id="0004" class="progress-bar progress-bar-striped active" href="#collapseExample0004" data-toggle="collapse" role="button" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                10%
+            </div>
+            </div>
+            <div id="collapseExample0004" class=" collapse" data-target="#collapseExample0004" >
+                <div class="progress-content">
+                        Sketched: 20%</br>
+                        Colored: 0% </br>
+                        Estimate Time To Publish: July 30th 2018
+                </div>
+            </div>
+        </div>
+           
     </div>
-    
 
-    <div id="footer" class="container-fluild">
-        <div class="footer-info">
-            <div class="album">
-                <h1> Albums </h1>
-                <ul>
-                    <li>Battle Cry</li>
-                    <li>Tokyo Showdown</li>
-                    <li>One and Forever</li>
-                    <li>Mystical Love</li>
-                </ul>
-            </div>
-            <div class="services">
-                <h1> Services </h1>
-                <ul>
-                    <li>Purchase</li> 
-                    <li>Transfer</li> 
-                    <li>Order</li> 
-                    <li>Shipment</li>                                       
-                </ul>
-            </div>
-            <div class="private-and-policy">
-                <h1> Private and Policy </h1>
-                <ul>
-                    <li>Our terms</li>                        
-                </ul>
-            </div>
-            
-        </div>
-        <div class="social">
-            <div class="social-item">
-                <img style="float:left;" width=50px height=50px src="images/facebook.png"><p style="line-height:50px; height:50px; color:white; float:left;">Facebook</p>
-            </div>
-            <div class="social-item">
-                <img style="float:left;" width=50px height=50px src="images/google-plus.png"><p style="line-height:50px; height:50px; color:white; float:left;">Google Plus</p>
-            </div>
-            <div class="social-item">
-                <img style="float:left;" width=50px height=50px src="images/pinterest.png"><p style="line-height:50px; height:50px; color:white; float:left;">Pinterest</p>
-            </div>
-            <div class="social-item">
-                <img style="float:left;" width=50px height=50px src="images/twitter.png"><p style="line-height:50px; height:50px; color:white; float:left;">Twitter</p>
+<footer id="myFooter" style="display:none">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Series</h5>
+                    <ul>
+                        <li><a href="#">The World Conqueror</a></li>
+                        <li><a href="#">Sign of Imusuras</a></li>
+                        <li><a href="#">Ancient Tomb Of A'Zek</a></li>
+                        <li><a href="#">A Lonely Journey</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Purchase</a></li>
+                        <li><a href="#">Transfer</a></li>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Private and Policy</h5>
+                    <ul>
+                        <li><a href="#">Our Rule</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-lg-3 info">
+                    <p><input id="btn-contact" type="button" value="Contact Now"></p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+        <div class="second-bar">
+           <div class="container">
+                <h2 class="logo"><a href="#"> LETTA </a></h2>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright" style="display:none" class="container">
         <div class="contact">
             <p>Copyright © 2018 Demonicalist</p>
         </div>
@@ -450,8 +477,10 @@
 </div>
 <div style="clear:both"></div>
 <!-- SCRIPT --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="js/custom.js"></script>
 <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
     

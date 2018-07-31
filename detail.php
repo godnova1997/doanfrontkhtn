@@ -26,9 +26,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a onclick = "scrollToHome()">Top</a></li>
-                <li><a onclick = "scrollToArtwork()" >Artwork</a></li>
-                <li><a onclick = "scrollToContact()" >About me</a></li>
+                <li><a onclick = "scrollToHome()"><div class="fa fa-arrow-up"></div></a></li>
             </ul>
             
             </div>
@@ -99,7 +97,49 @@
 </div>
 
 
-
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Series</h5>
+                    <ul>
+                        <li><a href="#">The World Conqueror</a></li>
+                        <li><a href="#">Sign of Imusuras</a></li>
+                        <li><a href="#">Ancient Tomb Of A'Zek</a></li>
+                        <li><a href="#">A Lonely Journey</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Purchase</a></li>
+                        <li><a href="#">Transfer</a></li>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">Shipment</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-3">
+                    <h5>Private and Policy</h5>
+                    <ul>
+                        <li><a href="#">Our Rule</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-lg-3 info">
+                    <p><input id="btn-contact" type="button" value="Contact Now"></p>
+                </div>
+            </div>
+        </div>
+        <div class="second-bar">
+           <div class="container">
+                <h2 class="logo"><a href="#"> LETTA </a></h2>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
